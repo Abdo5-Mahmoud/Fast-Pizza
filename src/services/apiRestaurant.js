@@ -1,5 +1,6 @@
-const API_URL_Menu = '/api/menu';
+const API_URL_Menu = 'api/menu';
 const API_URL = '/api';
+const API_URL_Order = 'api/order';
 
 export async function getMenu() {
   const res = await fetch(`${API_URL_Menu}`);
@@ -12,7 +13,7 @@ export async function getMenu() {
 }
 
 export async function getOrder(id) {
-  const res = await fetch(`${API_URL}/${id}`);
+  const res = await fetch(`${API_URL_Order}/${id}`);
   if (!res.ok) throw Error(`Couldn't find order #${id}`);
 
   const { data } = await res.json();
@@ -21,7 +22,7 @@ export async function getOrder(id) {
 
 export async function createOrder(newOrder) {
   try {
-    const res = await fetch(`${API_URL}`, {
+    const res = await fetch(`${API_URL_Order}`, {
       method: 'POST',
       body: JSON.stringify(newOrder),
       headers: {
@@ -38,8 +39,9 @@ export async function createOrder(newOrder) {
 }
 
 export async function updateOrder(id, updateObj) {
+  const fetchAPI = `${API_URL_Order}/${id}`;
   try {
-    const res = await fetch(`${API_URL}/${id}`, {
+    const res = await fetch(`${fetchAPI}`, {
       method: 'PATCH',
       body: JSON.stringify(updateObj),
       headers: {
