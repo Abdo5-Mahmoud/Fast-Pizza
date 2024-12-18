@@ -57,3 +57,12 @@ export async function updateOrder(id, updateObj) {
     throw Error('Failed updating your order');
   }
 }
+
+try {
+  const data = await fetch('sadfsadf');
+} catch (er) {
+  console.log(er);
+}
+
+
+// const [error,data] ?= await fetch('asdfasdf')
