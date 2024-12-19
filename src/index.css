@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-  .input{
-    @apply  rounded-full border border-stone-200 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-yellow-400 md:px-6 md:py-3 
-    }
-    /* 
+@layer components {
+  .input {
+    @apply rounded-full border border-stone-200 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-600 focus:outline-none focus:ring focus:ring-yellow-400 md:px-6 md:py-3;
+  }
+  /* 
     .loader {
     width: 15px;
     aspect-ratio: 1;
@@ -35,33 +35,66 @@
   @keyframes d10-2 {
       100%{transform:rotate(-360deg) translateX(26px)}
   } */
-.loader {
-  width: 45px;
-  aspect-ratio: 0.75;
-  --c: no-repeat linear-gradient(theme(colors.slate.800) 0 0);
-  background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
-  background-size: 20% 50%;
-  animation: loading 1s infinite linear;
-}
+  .loader {
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(theme(colors.slate.800) 0 0);
+    background:
+      var(--c) 0% 50%,
+      var(--c) 50% 50%,
+      var(--c) 100% 50%;
+    background-size: 20% 50%;
+    animation: loading 1s infinite linear;
+  }
 
-@keyframes loading {
-  20% {
-    background-position: 0% 0%, 50% 50%, 100% 50%;
+  @keyframes loading {
+    20% {
+      background-position:
+        0% 0%,
+        50% 50%,
+        100% 50%;
+    }
+    40% {
+      background-position:
+        0% 100%,
+        50% 0%,
+        100% 50%;
+    }
+    60% {
+      background-position:
+        0% 50%,
+        50% 100%,
+        100% 0%;
+    }
+    80% {
+      background-position:
+        0% 50%,
+        50% 50%,
+        100% 100%;
+    }
   }
-  40% {
-    background-position: 0% 100%, 50% 0%, 100% 50%;
-  }
-  60% {
-    background-position: 0% 50%, 50% 100%, 100% 0%;
-  }
-  80% {
-    background-position: 0% 50%, 50% 50%, 100% 100%;
-  }
-}
-
-
 }
 /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
 
+main{
+  background-color:rgba(170, 169, 165, 0.174);
+  /* background-color:#f0f0f04e ; */
+  width: fit-content;
+}
 
 
+.main {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* object-fit: cover; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-image: url('./public/shayan-ramesht-exSEmuA7R7k-unsplash.jpg');
+  }
+}

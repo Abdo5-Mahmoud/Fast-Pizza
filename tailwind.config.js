@@ -9,6 +9,13 @@ export default {
       fontFamily: {
         huge: '',
       },
+      colors: {
+        stone: {
+          // 700: 'rgb(224 220 215)',
+          // 600: 'rgb(190 181 170)',
+          // 500: '#718096',
+        },
+      },
       height: {
         screen: '100dvh',
       },
