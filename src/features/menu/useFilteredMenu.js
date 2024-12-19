@@ -1,5 +1,5 @@
-const useFilteredMenu = async ({ menu, value, sortValue }) => {
-  let filteredMenu = menu;
+export const filterData = async ({ menu, value, sortValue }) => {
+  let filteredMenu = await menu;
   if (value)
     filteredMenu = [...menu].filter((pizza) =>
       pizza.name.toLowerCase().includes(`${value}`),
@@ -13,11 +13,10 @@ const useFilteredMenu = async ({ menu, value, sortValue }) => {
       }
     });
 
-  console.log(menu);
-  console.log(value);
-  console.log(sortValue);
+  // console.log(menu);
+  // console.log(value);
+  // console.log(sortValue);
+  // console.log(filteredMenu);
 
   return filteredMenu;
 };
-
-export default useFilteredMenu;
