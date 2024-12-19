@@ -1,6 +1,4 @@
-import React from 'react';
-
-const useFilteredMenu = ({ menu, value, sortValue }) => {
+const useFilteredMenu = async ({ menu, value, sortValue }) => {
   let filteredMenu = menu;
   if (value)
     filteredMenu = [...menu].filter((pizza) =>

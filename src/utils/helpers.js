@@ -20,9 +20,9 @@ export function calcMinutesLeft(dateStr) {
   return Math.round((d2 - d1) / 60000);
 }
 
-console.log(formatCurrency(300));
-console.log(formatCurrency(300));
+// console.log(formatCurrency(300));
+// console.log(formatCurrency(300));
 
-console.log(formatDate("sun,jun,2003"));
+// console.log(formatDate("sun,jun,2003"));
 
-console.log(calcMinutesLeft("10/30/2024"));
+// console.log(calcMinutesLeft("10/30/2024"));
