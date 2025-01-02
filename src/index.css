@@ -76,12 +76,11 @@
 }
 /* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
 
-main{
-  background-color:rgba(170, 169, 165, 0.174);
+main {
+  background-color: rgba(170, 169, 165, 0.174);
   /* background-color:#f0f0f04e ; */
   width: fit-content;
 }
-
 
 .main {
   position: relative;
@@ -95,6 +94,6 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    background-image: url('./public/shayan-ramesht-exSEmuA7R7k-unsplash.jpg');
+    background-image: url(./public/shayan-ramesht-exSEmuA7R7k-unsplash.jpg);
   }
 }
