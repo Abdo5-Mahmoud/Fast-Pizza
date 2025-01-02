@@ -90,10 +90,10 @@ main {
     height: 100%;
     width: 100%;
     z-index: -1;
-    /* object-fit: cover; */
+    object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    background-image: url(./public/shayan-ramesht-exSEmuA7R7k-unsplash.jpg);
+    background-image: url('./images/bg.jpg');
   }
 }
